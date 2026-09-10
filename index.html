@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yoté</title>
+<title>Yoté — le jeu de plateau d'Afrique de l'Ouest</title>
 <style>
 :root { color-scheme: light dark; }
 body {
@@ -19,18 +19,76 @@ ul { padding-left: 1.2rem; }
 li { margin: .3rem 0; }
 code { background: #241c16; padding: .1rem .35rem; border-radius: 4px; }
 .lang { margin-top: 3rem; font-size: .9rem; color: #a2917c; }
+
+/* Page de téléchargement : le bouton d'abord, le reste ensuite. La plupart
+   des visiteurs arrivent par un lien partagé, sur un téléphone. */
+.tagline { font-size: 1.1rem; color: #f3ead9; margin: 0 0 1.8rem; }
+.get {
+  display: block; text-align: center; text-decoration: none;
+  background: #ffce55; color: #14100d; font-size: 1.15rem; font-weight: 600;
+  padding: 1rem 1.25rem; border-radius: 12px; margin: 0 0 .6rem;
+}
+.get:hover { background: #ffd977; }
+.under { text-align: center; font-size: .85rem; color: #a2917c; margin: 0 0 2.4rem; }
+ol { padding-left: 1.3rem; }
+ol li { margin: .5rem 0; }
+video { width: 100%; border-radius: 12px; border: 1px solid #3a2c22; }
+.shots {
+  display: grid; grid-template-columns: 1fr; gap: .7rem; margin: 1rem 0 0;
+}
+.shots img { border-radius: 10px; border: 1px solid #3a2c22; display: block; }
+@media (min-width: 34rem) { .shots { grid-template-columns: 1fr 1fr; } }
 </style>
 </head>
 <body>
 <h1>Yoté</h1>
-<p>Le jeu de plateau traditionnel d'Afrique de l'Ouest, sur Android. À deux
-joueurs sur le même téléphone, ou contre l'ordinateur.</p>
+<p class="tagline">Une capture retire <strong>deux</strong> pions. Le jeu de
+plateau traditionnel du Sénégal, à deux joueurs sur le même téléphone ou contre
+l'ordinateur.</p>
+
+<a class="get" href="https://github.com/adamstra/Yote/releases/latest/download/yote.apk">Télécharger pour Android</a>
+<p class="under">165 Mo &nbsp;·&nbsp; Android 10 ou plus récent &nbsp;·&nbsp;
+gratuit, sans achat intégré &nbsp;·&nbsp; <a href="https://github.com/adamstra/Yote/releases/latest">autres versions</a></p>
+
+<h2>Installer</h2>
+<ol>
+<li>Touchez le bouton ci-dessus : le fichier <code>yote.apk</code> se
+télécharge.</li>
+<li>Ouvrez-le. Android demandera l'autorisation d'installer une application
+venant de cette source — c'est normal hors du Play Store : acceptez pour votre
+navigateur.</li>
+<li>Installez, et jouez. Aucun compte, aucune inscription.</li>
+</ol>
+
+<h2>Le jeu en vingt secondes</h2>
+<video controls preload="metadata" playsinline src="promo.mp4"></video>
+
+<h2>À quoi cela ressemble</h2>
+<div class="shots">
+<img src="capture-01.png" alt="Une capture en cours : le pion sauté, puis un second à retirer">
+<img src="capture-02.png" alt="Une partie à deux joueurs sur le même téléphone">
+<img src="capture-03.png" alt="Le tutoriel guidé, sur le vrai plateau">
+</div>
+
+<h2>Ce que contient le jeu</h2>
+<ul>
+<li>Deux joueurs sur le même téléphone, ou contre l'ordinateur</li>
+<li>Quatre niveaux : facile, moyen, difficile, expert</li>
+<li>Un tutoriel guidé en cinq étapes, sur le vrai plateau</li>
+<li>Statistiques, séries de victoires et huit défis</li>
+<li>Reprise automatique de la partie interrompue</li>
+<li>Se joue hors ligne ; une publicité s'affiche entre certaines parties,
+jamais pendant</li>
+</ul>
+
 <h2>Confidentialité</h2>
 <ul>
 <li><a href="confidentialite.html">Politique de confidentialité</a> (français)</li>
 <li><a href="privacy.html">Privacy policy</a> (English)</li>
 </ul>
-<h2>Contact</h2>
-<p>Adama Traoré — <a href="mailto:adama.traore0802@gmail.com">adama.traore0802@gmail.com</a></p>
+
+<h2>Contact et code</h2>
+<p>Adama Traoré — <a href="mailto:adama.traore0802@gmail.com">adama.traore0802@gmail.com</a><br>
+Le code du jeu est public : <a href="https://github.com/adamstra/Yote">github.com/adamstra/Yote</a></p>
 </body>
 </html>

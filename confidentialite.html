@@ -19,6 +19,25 @@ ul { padding-left: 1.2rem; }
 li { margin: .3rem 0; }
 code { background: #241c16; padding: .1rem .35rem; border-radius: 4px; }
 .lang { margin-top: 3rem; font-size: .9rem; color: #a2917c; }
+
+/* Page de téléchargement : le bouton d'abord, le reste ensuite. La plupart
+   des visiteurs arrivent par un lien partagé, sur un téléphone. */
+.tagline { font-size: 1.1rem; color: #f3ead9; margin: 0 0 1.8rem; }
+.get {
+  display: block; text-align: center; text-decoration: none;
+  background: #ffce55; color: #14100d; font-size: 1.15rem; font-weight: 600;
+  padding: 1rem 1.25rem; border-radius: 12px; margin: 0 0 .6rem;
+}
+.get:hover { background: #ffd977; }
+.under { text-align: center; font-size: .85rem; color: #a2917c; margin: 0 0 2.4rem; }
+ol { padding-left: 1.3rem; }
+ol li { margin: .5rem 0; }
+video { width: 100%; border-radius: 12px; border: 1px solid #3a2c22; }
+.shots {
+  display: grid; grid-template-columns: 1fr; gap: .7rem; margin: 1rem 0 0;
+}
+.shots img { border-radius: 10px; border: 1px solid #3a2c22; display: block; }
+@media (min-width: 34rem) { .shots { grid-template-columns: 1fr 1fr; } }
 </style>
 </head>
 <body>
