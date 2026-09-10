@@ -14,6 +14,9 @@ body {
 h1 { font-size: 1.9rem; color: #ffce55; margin: 0 0 .4rem; }
 h2 { font-size: 1.15rem; color: #ffce55; margin: 2.2rem 0 .6rem; }
 a { color: #ffce55; }
+/* Sans cette borne, une capture de 1920 px de large s'étale hors de l'écran
+   et pousse la page à défiler latéralement. */
+img { max-width: 100%; height: auto; display: block; }
 em { color: #a2917c; font-style: normal; }
 ul { padding-left: 1.2rem; }
 li { margin: .3rem 0; }
