@@ -43,8 +43,11 @@ video { width: 100%; border-radius: 12px; border: 1px solid #3a2c22; }
   display: flex; gap: .7rem; margin: 1rem 0 0; overflow-x: auto;
   scroll-snap-type: x mandatory; padding-bottom: .4rem;
 }
+/* min-width: 0 — sans lui, un élément flexible ne descend pas sous la taille
+   propre de son image, et chaque capture prenait toute la largeur : plus
+   d'amorce de la suivante au bord, donc rien pour dire qu'on peut défiler. */
 .shots img {
-  flex: 0 0 72%; scroll-snap-align: center;
+  flex: 0 0 72%; min-width: 0; scroll-snap-align: center;
   border-radius: 10px; border: 1px solid #3a2c22; display: block;
 }
 @media (min-width: 40rem) {
