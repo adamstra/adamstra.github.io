@@ -36,11 +36,20 @@ code { background: #241c16; padding: .1rem .35rem; border-radius: 4px; }
 ol { padding-left: 1.3rem; }
 ol li { margin: .5rem 0; }
 video { width: 100%; border-radius: 12px; border: 1px solid #3a2c22; }
+/* Les captures sont en portrait : empilées sur un téléphone, elles faisaient
+   défiler trois écrans entiers. Elles y défilent donc de côté, une à la fois ;
+   sur un écran large, elles tiennent sur une rangée. */
 .shots {
-  display: grid; grid-template-columns: 1fr; gap: .7rem; margin: 1rem 0 0;
+  display: flex; gap: .7rem; margin: 1rem 0 0; overflow-x: auto;
+  scroll-snap-type: x mandatory; padding-bottom: .4rem;
 }
-.shots img { border-radius: 10px; border: 1px solid #3a2c22; display: block; }
-@media (min-width: 34rem) { .shots { grid-template-columns: 1fr 1fr; } }
+.shots img {
+  flex: 0 0 72%; scroll-snap-align: center;
+  border-radius: 10px; border: 1px solid #3a2c22; display: block;
+}
+@media (min-width: 40rem) {
+  .shots { display: grid; grid-template-columns: repeat(3, 1fr); overflow: visible; }
+}
 </style>
 </head>
 <body>
@@ -50,8 +59,9 @@ plateau traditionnel du Sénégal, à deux joueurs sur le même téléphone ou c
 l'ordinateur.</p>
 
 <a class="get" href="https://github.com/adamstra/adamstra.github.io/releases/latest/download/yote.apk">Télécharger pour Android</a>
-<p class="under">165 Mo &nbsp;·&nbsp; Android 10 ou plus récent &nbsp;·&nbsp;
-gratuit, sans achat intégré &nbsp;·&nbsp; <a href="https://github.com/adamstra/adamstra.github.io/releases/latest">autres versions</a></p>
+<p class="under">Version 1.0.1 &nbsp;·&nbsp; 166 Mo &nbsp;·&nbsp; Android 10 ou plus
+récent &nbsp;·&nbsp; gratuit, sans achat intégré &nbsp;·&nbsp;
+<a href="https://github.com/adamstra/adamstra.github.io/releases/latest">autres versions</a></p>
 
 <h2>Installer</h2>
 <ol>
@@ -62,8 +72,10 @@ venant de cette source — c'est normal hors du Play Store : acceptez pour votre
 navigateur.</li>
 <li>Installez, et jouez. Aucun compte, aucune inscription.</li>
 </ol>
+<p>Vous avez déjà le jeu ? Installez simplement la nouvelle version par-dessus :
+vos parties et vos statistiques sont conservées.</p>
 
-<h2>Le jeu en vingt secondes</h2>
+<h2>Le jeu en vidéo</h2>
 <video controls preload="metadata" playsinline src="promo.mp4"></video>
 
 <h2>À quoi cela ressemble</h2>

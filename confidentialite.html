@@ -36,11 +36,20 @@ code { background: #241c16; padding: .1rem .35rem; border-radius: 4px; }
 ol { padding-left: 1.3rem; }
 ol li { margin: .5rem 0; }
 video { width: 100%; border-radius: 12px; border: 1px solid #3a2c22; }
+/* Les captures sont en portrait : empilées sur un téléphone, elles faisaient
+   défiler trois écrans entiers. Elles y défilent donc de côté, une à la fois ;
+   sur un écran large, elles tiennent sur une rangée. */
 .shots {
-  display: grid; grid-template-columns: 1fr; gap: .7rem; margin: 1rem 0 0;
+  display: flex; gap: .7rem; margin: 1rem 0 0; overflow-x: auto;
+  scroll-snap-type: x mandatory; padding-bottom: .4rem;
 }
-.shots img { border-radius: 10px; border: 1px solid #3a2c22; display: block; }
-@media (min-width: 34rem) { .shots { grid-template-columns: 1fr 1fr; } }
+.shots img {
+  flex: 0 0 72%; scroll-snap-align: center;
+  border-radius: 10px; border: 1px solid #3a2c22; display: block;
+}
+@media (min-width: 40rem) {
+  .shots { display: grid; grid-template-columns: repeat(3, 1fr); overflow: visible; }
+}
 </style>
 </head>
 <body>
